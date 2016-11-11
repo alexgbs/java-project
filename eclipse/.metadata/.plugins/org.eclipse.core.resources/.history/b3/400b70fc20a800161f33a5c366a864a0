@@ -1,0 +1,14 @@
+package auto.ch.moser.model;
+
+public class Hersteller {
+	private String name;
+	private String standort;
+	
+	public Hersteller(String name, String standort) {
+		super();
+		this.name = name;
+		this.standort = standort;
+	}
+	
+	
+}
