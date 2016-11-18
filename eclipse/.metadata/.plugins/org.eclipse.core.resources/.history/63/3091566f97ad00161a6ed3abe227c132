@@ -25,7 +25,7 @@ public class AutoZusammenSteller {
 	public Object commands(String s) {
 		Object object = null;
 		switch(s) {
-		case "De alex het en chliine": break;
+		case 
 			default:
 				System.out.println("ERROR");
 		}
