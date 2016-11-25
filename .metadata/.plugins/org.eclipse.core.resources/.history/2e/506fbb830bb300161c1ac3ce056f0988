@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public abstract class ScannerHelper {
 
-	public String[] readLine() {
+	public String readString() {
 		
 		Scanner scanner= new Scanner(System.in);
-		String value = scanner.nextLine();
-		return value.split(" ");
+		String value = scanner.next();
+		return value;
 	}
 	
 }
