@@ -7,10 +7,9 @@ import java.util.ArrayList;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 
-import auto.ch.moser.model.helpers.ScannerHelper;
 import auto.ch.moser.model.motor.Motor;
 
-public class Auto extends ScannerHelper implements Commandable {
+public class Auto implements Commandable {
 	
 	String karosserieFarbe;
 	String sitzFarbe;
