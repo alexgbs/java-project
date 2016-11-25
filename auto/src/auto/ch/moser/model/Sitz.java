@@ -91,9 +91,9 @@ public class Sitz extends Teil {
 					if (!testCommandLenght(command,1)) break;
 					System.out.println("Sitzdaten");
 					System.out.println("String: " + typ);
-					System.out.println("boolean: " + hasHeizung);
-					System.out.println("boolean: " + hasLehne);
-					System.out.println("boolean: " + hasBezug);
+					System.out.println("hat Heizung: " + hasHeizung);
+					System.out.println("hat Lehne: " + hasLehne);
+					System.out.println("hat Bezug: " + hasBezug);
 					System.out.println("Kopfstuetze: " + kopfstütze);
 					System.out.println("String: " + sitzFarbe);
 					System.out.println("String: " + sitzBezugsArt);
@@ -117,6 +117,14 @@ public class Sitz extends Teil {
 					if (!testCommandLenght(command,1)) break;
 					if (kopfstütze != null) kopfstütze = new Kopfstuetze(new Hersteller("Alex und Daman GmbH", "Silicon Valey"), null);
 					modified = kopfstütze.executeCommand();
+				case "setSitzFarbe":
+					if (!testCommandLenght(command)) break;
+					sitzFarbe = command[1];
+					System.out.println("Sitz Farbe erflogreich auf " + sitzFarbe + " gesetzt");
+				case "setSitzBezugsArt":
+					if (!testCommandLenght(command)) break;
+					sitzBezugsArt = command[1];
+					System.out.println("Sitz Bezugs Art erfolgreich auf " + sitzBezugsArt + " gesetzt");
 				case "return":
 					if (!testCommandLenght(command,1)) break;
 					end = true;

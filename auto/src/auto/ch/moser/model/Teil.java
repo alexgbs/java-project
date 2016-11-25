@@ -1,6 +1,8 @@
 package auto.ch.moser.model;
 
-public abstract class Teil implements Commandable {
+import auto.ch.moser.model.helpers.CommandHelper;
+
+public abstract class Teil extends CommandHelper implements Commandable {
 	Hersteller hersteller;
 	
 	protected Teil(Hersteller hersteller) {
