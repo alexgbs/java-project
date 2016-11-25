@@ -1,0 +1,17 @@
+package auto.ch.moser.model;
+
+public class Verbrennungsmotor extends Motor {
+	
+	String typ;
+	float hubraum;
+	
+	Verbrennungsmotor(float leistung, Hersteller hersteller, String typ, float hubraum) {
+		
+		this.typ = typ;
+		this.hubraum = hubraum;
+		
+		super(leistung, hersteller);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

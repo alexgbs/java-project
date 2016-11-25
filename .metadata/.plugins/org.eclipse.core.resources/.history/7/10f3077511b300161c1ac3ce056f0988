@@ -1,0 +1,12 @@
+package auto.ch.moser.model;
+
+public class Verbrennungsmotor extends Motor {
+
+	Verbrennungsmotor(float leistung, Hersteller hersteller) {
+		super(leistung, hersteller);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+}
