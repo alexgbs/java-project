@@ -80,34 +80,8 @@ public class Sitz extends Teil {
 
 	@Override
 	public boolean executeCommand() {
-		boolean end = false;
-		boolean modified = false;
-		while(!end) {
-			System.out.println("Werkstatt:>");
-			String[] command = readLine();
-			switch(command[0]) {
-				case "list":
-					if (!testCommandLenght(command,1)) break;
-					System.out.println("Sitzdaten");
-					System.out.println("String: " + typ);
-					System.out.println("boolean: " + hasHeizung);
-					System.out.println("boolean: " + hasLehne);
-					System.out.println("boolean: " + hasBezug);
-					System.out.println("Kopfstuetze: " + kopfstütze);
-					System.out.println("String: " + sitzFarbe);
-					System.out.println("String: " + sitzBezugsArt);
-				case "setTyp":
-					typ = command[1];
-					System.out.println("");
-				case "return":
-					if (!testCommandLenght(command,1)) break;
-					end = true;
-					break;
-				default:
-					System.out.println("Komando nicht gefunden!");
-			}
-		}
-		return modified;
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
