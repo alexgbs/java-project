@@ -15,4 +15,10 @@ public class Kopfstütze extends Teil {
 	public void setFarbe(String farbe) {
 		this.farbe = farbe;
 	}
+
+	@Override
+	public boolean executeCommand() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

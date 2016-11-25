@@ -9,8 +9,9 @@ import java.util.regex.Pattern;
 import auto.ch.moser.model.Auto;
 import auto.ch.moser.model.Commandable;
 import auto.ch.moser.model.Teil;
+import auto.ch.moser.model.helpers.ScannerHelper;
 
-public class AutoZusammenSteller implements Commandable {
+public class AutoZusammenSteller extends ScannerHelper implements Commandable {
 	Scanner scanner;
 	Pattern pattern;
 	Map<String, Auto>auto;
@@ -18,15 +19,28 @@ public class AutoZusammenSteller implements Commandable {
 		scanner = new Scanner(stream);
 		pattern = Pattern.compile("([^ ]*)");
 		String s = scanner.next(pattern);
-		if(scanner.hasNext(pattern)) {
-			commands(s);
-		}		
+				
 	}
 
 	@Override
 	public boolean executeCommand() {
-		scanner.nextLine();
-		// TODO Auto-generated method stub
-		return false;
+		boolean end = false;
+		while(!end) {
+			String[] command = readLine();
+			switch(comman[0]) {
+			case "getAuto":
+				Auto a = auto.get(command[1]);
+				if(a == null) {
+					break;
+				}
+				a.executeCommand();
+			case "end":
+				
+			case "listAll":
+				
+				default:
+					
+			}
+		}
 	}
 }

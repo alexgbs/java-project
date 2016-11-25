@@ -57,4 +57,10 @@ public class Sitz extends Teil {
 		this.kopfstütze = kopfstütze;
 	}
 
+	@Override
+	public boolean executeCommand() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

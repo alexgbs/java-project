@@ -21,4 +21,9 @@ public class Reifen extends Teil {
 	public void setArt(String art) {
 		Art = art;
 	}
+	@Override
+	public boolean executeCommand() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
