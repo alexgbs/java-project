@@ -1,29 +1,20 @@
-<<<<<<< HEAD
-INDEX VERSION 1.127+H:\git2\eclipse\.metadata\.plugins\org.eclipse.jdt.core
-3072527077.index
-1844373992.index
-1346179946.index
-822469629.index
-2331006643.index
-=======
 INDEX VERSION 1.127+H:\git\eclipse\.metadata\.plugins\org.eclipse.jdt.core
->>>>>>> 90c0ffcc80cfb8ec465b35f20609d3d27f722e01
 2735805006.index
+1844373992.index
+1488992838.index
+3041932947.index
 1518282843.index
-<<<<<<< HEAD
-=======
 3072527077.index
 1018653977.index
 1793070003.index
->>>>>>> 90c0ffcc80cfb8ec465b35f20609d3d27f722e01
+2084515633.index
 3819169588.index
-2838409203.index
-17627288.index
 3034034245.index
-2412471571.index
+822469629.index
+17627288.index
+1346179946.index
 4024644553.index
-1488992838.index
+2412471571.index
+2331006643.index
+2838409203.index
 3655988627.index
-1018653977.index
-3041932947.index
-1793070003.index

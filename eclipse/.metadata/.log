@@ -1384,3 +1384,13 @@ org.eclipse.e4.core.di.InjectionException: java.lang.OutOfMemoryError: Java heap
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.ui 4 0 2016-11-25 16:10:40.976
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.OutOfMemoryError: Requested array size exceeds VM limit
+
+!ENTRY org.eclipse.jdt.core 4 4 2016-11-25 16:10:44.075
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space

@@ -82,6 +82,7 @@ public class Sitz extends Teil {
 	public boolean executeCommand() {
 		boolean end = false;
 		boolean modified = false;
+		
 		while(!end) {
 			System.out.println("Werkstatt:>");
 			String[] command = readLine();
@@ -97,8 +98,25 @@ public class Sitz extends Teil {
 					System.out.println("String: " + sitzFarbe);
 					System.out.println("String: " + sitzBezugsArt);
 				case "setTyp":
+					if (!testCommandLenght(command)) break;
 					typ = command[1];
-					System.out.println("");
+					System.out.println("Typ erfolgreich auf " + typ + "gesetzt");
+				case "setHasHeizung":
+					if (!testCommandLenght(command)) break;
+					if (command[1] == "true") hasHeizung = true;
+					if (command[1] == "false") hasHeizung = false;
+				case "setHasLehne":
+					if (!testCommandLenght(command)) break;
+					if (command[1] == "true") hasLehne = true;
+					if (command[1] == "false") hasLehne = false;
+				case "setHasBezug":
+					if (!testCommandLenght(command)) break;
+					if (command[1] == "true") hasBezug = true;
+					if (command[1] == "false") hasBezug = false;
+				case "getKopfstütze":
+					if (!testCommandLenght(command,1)) break;
+					if (kopfstütze != null) kopfstütze = new Kopfstuetze(new Hersteller("Alex und Daman GmbH", "Silicon Valey"), null);
+					modified = kopfstütze.executeCommand();
 				case "return":
 					if (!testCommandLenght(command,1)) break;
 					end = true;
