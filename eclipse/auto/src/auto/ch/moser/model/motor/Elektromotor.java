@@ -8,5 +8,11 @@ public class Elektromotor extends Motor {
 		super(leistung, hersteller);
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public boolean executeCommand() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 }

@@ -1,8 +1,10 @@
 package auto.ch.moser.model.motor;
 
+import auto.ch.moser.model.Commandable;
 import auto.ch.moser.model.Hersteller;
+import auto.ch.moser.model.helpers.ScannerHelper;
 
-public abstract class Motor {
+public abstract class Motor extends ScannerHelper implements Commandable {
 
 	float leistung;
 	Hersteller hersteller;
