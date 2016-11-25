@@ -96,9 +96,8 @@ public class Sitz extends Teil {
 					System.out.println("Kopfstuetze: " + kopfstütze);
 					System.out.println("String: " + sitzFarbe);
 					System.out.println("String: " + sitzBezugsArt);
-				case "setTyp":
-					typ = command[1];
-					System.out.println("");
+				case "":
+					
 				case "return":
 					if (!testCommandLenght(command,1)) break;
 					end = true;
