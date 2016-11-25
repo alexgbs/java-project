@@ -6,20 +6,15 @@ public class Sitz extends Teil {
 	boolean hasLehne;
 	boolean hasBezug;
 	Kopfstuetze kopfstütze;
-	String sitzFarbe;
-	String sitzBezugsArt;
 	
 	public Sitz(Hersteller hersteller, String typ, boolean hasHeizung,
-			boolean hasLehne, boolean hasBezug, Kopfstuetze kopfstütze,
-			String sitzFarbe, String sitzBezugsArt) {
+			boolean hasLehne, boolean hasBezug, Kopfstuetze kopfstütze) {
 		super(hersteller);
 		this.typ = typ;
 		this.hasHeizung = hasHeizung;
 		this.hasLehne = hasLehne;
 		this.hasBezug = hasBezug;
 		this.kopfstütze = kopfstütze;
-		this.sitzFarbe = sitzFarbe;
-		this.sitzBezugsArt = sitzBezugsArt;
 	}
 
 	public String getTyp() {
@@ -60,22 +55,6 @@ public class Sitz extends Teil {
 
 	public void setKopfstütze(Kopfstuetze kopfstütze) {
 		this.kopfstütze = kopfstütze;
-	}
-
-	public String getSitzFarbe() {
-		return sitzFarbe;
-	}
-
-	public void setSitzFarbe(String sitzFarbe) {
-		this.sitzFarbe = sitzFarbe;
-	}
-
-	public String getSitzBezugsArt() {
-		return sitzBezugsArt;
-	}
-
-	public void setSitzBezugsArt(String sitzBezugsArt) {
-		this.sitzBezugsArt = sitzBezugsArt;
 	}
 
 	@Override

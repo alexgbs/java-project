@@ -3,8 +3,6 @@ package auto.ch.moser.model;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.function.BiConsumer;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
@@ -15,10 +13,12 @@ import auto.ch.moser.model.motor.Motor;
 public class Auto extends CommandHelper implements Commandable {
 	
 	String karosserieFarbe;
+	String sitzFarbe;
+	String sitzBezugsArt;
 	Felgen felgen;
 	Kopfstuetze kopfstuetze;
 	Reifen reifen;
-	Map<String, Sitz> sitze;
+	Sitz sitz;
 	Motor motor;
 	
 		
@@ -29,7 +29,19 @@ public class Auto extends CommandHelper implements Commandable {
 	public void setKarosserieFarbe(String karosserieFarbe) {
 		this.karosserieFarbe = karosserieFarbe;
 	}
-
+	public String getSitzFarbe() {
+		return sitzFarbe;
+	}
+	public void setSitzFarbe(String sitzFarbe) {
+		this.sitzFarbe = sitzFarbe;
+	}
+	public String getSitzBezugsArt() {
+		return sitzBezugsArt;
+	}
+	public void setSitzBezugsArt(String sitzBezugsArt) {
+		this.sitzBezugsArt = sitzBezugsArt;
+	}
+	
 	@Override
 	public boolean executeCommand() {
 		boolean end = false;
@@ -39,28 +51,15 @@ public class Auto extends CommandHelper implements Commandable {
 			String[] command = readLine();
 			switch(command[0]) {
 			case "return":
-				if(!testCommandLenght(command, 1)) break;
 				end = true;
 				break;
 			case "setKarosserie":
-				if(!testCommandLenght(command)) break;
 				karosserieFarbe = command[1];
-				System.out.println("Karosserie erfolgreich auf " + karosserieFarbe + " gesetzt");
+				
 				break;
-			case "getSitz":
-				if(!testCommandLenght(command, 1)) break;
-				Sitz sitz = sitze.get(command[1]);
-				if(sitz == null) sitz = new Sitz(new Hersteller("Alex und Damian GmbH", "Silicon Valey"), command[1], false, false, false, null, null, null);
-				modified = sitz.executeCommand();
+			case "listKarosserie":
+				break;
 			case "list":
-				if(!testCommandLenght(command, 1)) break;
-				System.out.println("Autodaten");
-				System.out.println("Karosserie: " + karosserieFarbe);
-				System.out.println("Felgen: " + felgen);
-				System.out.println("Kopfstuetze: " + kopfstuetze);
-				System.out.println("Reifen: " + reifen);
-				sitze.keySet().forEach(e -> System.out.println("Sitz: " + e));
-				System.out.println("Motor: " + motor);
 				break;
 				default:
 					
