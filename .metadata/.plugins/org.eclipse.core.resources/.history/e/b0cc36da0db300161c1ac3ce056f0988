@@ -8,6 +8,8 @@ public class Auto {
 	String sitzFarbe;
 	String sitzBezugsArt;
 	
+	
+	
 	public ArrayList<Teil> getTeile() {
 		return teile;
 	}
