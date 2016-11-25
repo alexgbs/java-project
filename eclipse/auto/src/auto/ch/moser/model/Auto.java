@@ -1,16 +1,22 @@
 package auto.ch.moser.model;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonIOException;
+
+import auto.ch.moser.model.helpers.CommandHelper;
 import auto.ch.moser.model.motor.Motor;
 
-public class Auto implements Commandable {
+public class Auto extends CommandHelper implements Commandable {
 	
 	String karosserieFarbe;
 	String sitzFarbe;
 	String sitzBezugsArt;
 	Felgen felgen;
-	Kopfstütze kopfstuetze;
+	Kopfstuetze kopfstuetze;
 	Reifen reifen;
 	Sitz sitz;
 	Motor motor;
@@ -35,9 +41,30 @@ public class Auto implements Commandable {
 	public void setSitzBezugsArt(String sitzBezugsArt) {
 		this.sitzBezugsArt = sitzBezugsArt;
 	}
+	
 	@Override
 	public boolean executeCommand() {
-		// TODO Auto-generated method stub
-		return false;
+		boolean end = false;
+		boolean modified = false;
+		while(!end) {
+			System.out.println("Werkstatt:>");
+			String[] command = readLine();
+			switch(command[0]) {
+			case "return":
+				end = true;
+				break;
+			case "setKarosserie":
+				karosserieFarbe = command[1];
+				
+				break;
+			case "listKarosserie":
+				break;
+			case "list":
+				break;
+				default:
+					
+			}
+		}
+		return modified;
 	}
 }

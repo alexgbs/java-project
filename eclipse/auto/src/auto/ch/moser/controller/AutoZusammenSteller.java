@@ -13,14 +13,14 @@ import java.util.regex.Pattern;
 
 import auto.ch.moser.model.Auto;
 import auto.ch.moser.model.Commandable;
-import auto.ch.moser.model.helpers.ScannerHelper;
+import auto.ch.moser.model.helpers.CommandHelper;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
-public class AutoZusammenSteller extends ScannerHelper implements Commandable {
+public class AutoZusammenSteller extends CommandHelper implements Commandable {
 	Scanner scanner;
 	Pattern pattern;
 	Map<String, Auto>auto;
@@ -66,6 +66,9 @@ public class AutoZusammenSteller extends ScannerHelper implements Commandable {
 				end = true;
 				break;
 			case "listAll":
+				break;
+			case "createAuto": 
+				
 				
 				default:
 					

@@ -5,10 +5,10 @@ public class Sitz extends Teil {
 	boolean hasHeizung;
 	boolean hasLehne;
 	boolean hasBezug;
-	Kopfstütze kopfstütze;
+	Kopfstuetze kopfstütze;
 	
 	public Sitz(Hersteller hersteller, String typ, boolean hasHeizung,
-			boolean hasLehne, boolean hasBezug, Kopfstütze kopfstütze) {
+			boolean hasLehne, boolean hasBezug, Kopfstuetze kopfstütze) {
 		super(hersteller);
 		this.typ = typ;
 		this.hasHeizung = hasHeizung;
@@ -49,11 +49,11 @@ public class Sitz extends Teil {
 		this.hasBezug = hasBezug;
 	}
 
-	public Kopfstütze getKopfstütze() {
+	public Kopfstuetze getKopfstütze() {
 		return kopfstütze;
 	}
 
-	public void setKopfstütze(Kopfstütze kopfstütze) {
+	public void setKopfstütze(Kopfstuetze kopfstütze) {
 		this.kopfstütze = kopfstütze;
 	}
 
