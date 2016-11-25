@@ -21,15 +21,10 @@ import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
 public class AutoZusammenSteller extends CommandHelper implements Commandable {
-	Scanner scanner;
-	Pattern pattern;
 	Map<String, Auto>auto;
 	File file = new File("T:\\aue\\autos.json");
 	public AutoZusammenSteller(InputStream stream) {
-		scanner = new Scanner(stream);
-		pattern = Pattern.compile("([^ ]*)");
-		String s = scanner.next(pattern);
-		Gson gson = new Gson();
+		/*Gson gson = new Gson();
 		Type type = new TypeToken<Map<String, Auto>>() {}.getType();
 		try {
 			auto = gson.fromJson(new FileReader(file), type);
@@ -42,7 +37,7 @@ public class AutoZusammenSteller extends CommandHelper implements Commandable {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		executeCommand();
 	}
 

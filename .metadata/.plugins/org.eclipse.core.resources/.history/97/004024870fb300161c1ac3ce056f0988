@@ -1,7 +1,0 @@
-package auto.ch.moser.model;
-
-public enum Verbrennungsmotor extends Motor {
-
-		
-	
-}

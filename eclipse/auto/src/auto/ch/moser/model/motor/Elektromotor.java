@@ -4,7 +4,7 @@ import auto.ch.moser.model.Hersteller;
 
 public class Elektromotor extends Motor {
 
-	Elektromotor(float leistung, Hersteller hersteller) {
+	public Elektromotor(float leistung, Hersteller hersteller) {
 		super(leistung, hersteller);
 		// TODO Auto-generated constructor stub
 	}

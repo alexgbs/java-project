@@ -1,5 +1,0 @@
-package auto.ch.moser.model.helpers;
-
-public abstract class ScannerHelper {
-
-}

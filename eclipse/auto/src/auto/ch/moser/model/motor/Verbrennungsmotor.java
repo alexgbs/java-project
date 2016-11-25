@@ -14,7 +14,7 @@ public class Verbrennungsmotor extends Motor {
 	String typ;
 	float hubraum;
 	
-	Verbrennungsmotor(float leistung, Hersteller hersteller, String typ, float hubraum) {
+	public Verbrennungsmotor(float leistung, Hersteller hersteller, String typ, float hubraum) {
 		
 		super(leistung, hersteller);
 		
