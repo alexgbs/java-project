@@ -2,7 +2,7 @@ package auto.ch.moser.model;
 
 import java.util.ArrayList;
 
-public class Auto implements Commandable {
+public class Auto {
 	ArrayList<Teil> teile;
 	String karosserieFarbe;
 	String sitzFarbe;
@@ -33,10 +33,5 @@ public class Auto implements Commandable {
 	}
 	public void setSitzBezugsArt(String sitzBezugsArt) {
 		this.sitzBezugsArt = sitzBezugsArt;
-	}
-	@Override
-	public boolean executeCommand() {
-		// TODO Auto-generated method stub
-		return false;
 	}
 }
