@@ -1,8 +1,0 @@
-package auto.ch.moser.model;
-
-public enum MotorTyp extends Motor {
-
-		
-	
-}
- 
