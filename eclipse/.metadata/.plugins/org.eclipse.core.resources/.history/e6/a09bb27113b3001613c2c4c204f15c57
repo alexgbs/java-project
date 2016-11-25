@@ -10,7 +10,7 @@ public class Auto implements Commandable {
 	String sitzFarbe;
 	String sitzBezugsArt;
 	Felgen felgen;
-	Kopfstuetze kopfstuetze;
+	Kopfstütze kopfstuetze;
 	Reifen reifen;
 	Sitz sitz;
 	Motor motor;
