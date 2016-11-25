@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 
-import auto.ch.moser.model.helpers.CommandHelper;
+import auto.ch.moser.model.helpers.ScannerHelper;
 import auto.ch.moser.model.motor.Motor;
 
-public class Auto extends CommandHelper implements Commandable {
+public class Auto extends ScannerHelper implements Commandable {
 	
 	String karosserieFarbe;
 	String sitzFarbe;
@@ -50,19 +50,33 @@ public class Auto extends CommandHelper implements Commandable {
 			System.out.println("Werkstatt:>");
 			String[] command = readLine();
 			switch(command[0]) {
-			case "return":
+			case "getAuto":
+				Auto a = auto.get(command[1]);
+				if(a == null) {
+					System.out.println("Dieses Auto existiert nicht!");
+					break;
+				}
+				modified = a.executeCommand();
+				break;
+			case "end":
 				end = true;
 				break;
-			case "setKarosserie":
-				karosserieFarbe = command[1];
+			case "listAll":
 				
-				break;
-			case "listKarosserie":
-				break;
-			case "list":
-				break;
 				default:
 					
+			}
+			if(modified) {
+				Gson gson = new Gson();
+				try {
+					gson.toJson(auto, new FileWriter("file"));
+				} catch (JsonIOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 		return modified;
