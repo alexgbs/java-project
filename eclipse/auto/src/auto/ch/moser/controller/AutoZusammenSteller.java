@@ -7,9 +7,10 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 import auto.ch.moser.model.Auto;
+import auto.ch.moser.model.Commandable;
 import auto.ch.moser.model.Teil;
 
-public class AutoZusammenSteller {
+public class AutoZusammenSteller implements Commandable {
 	Scanner scanner;
 	Pattern pattern;
 	Map<String, Auto>auto;
@@ -21,14 +22,11 @@ public class AutoZusammenSteller {
 			commands(s);
 		}		
 	}
-	
-	public Object commands(String s) {
-		Object object = null;
-		switch(s) {
-		case "De alex het en chliine": break;
-			default:
-				System.out.println("ERROR");
-		}
-		return null;
+
+	@Override
+	public boolean executeCommand() {
+		scanner.nextLine();
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
