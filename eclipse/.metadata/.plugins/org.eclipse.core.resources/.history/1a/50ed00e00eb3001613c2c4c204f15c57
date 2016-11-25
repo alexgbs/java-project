@@ -3,15 +3,19 @@ package auto.ch.moser.model;
 import java.util.ArrayList;
 
 public class Auto implements Commandable {
-	
+	ArrayList<Teil> teile;
 	String karosserieFarbe;
 	String sitzFarbe;
 	String sitzBezugsArt;
-	Felgen felgen;
-	Kopfstütze kopfstuetze;
-	Reifen reifen;
-	Sitz sitz;
-		
+	
+	
+	
+	public ArrayList<Teil> getTeile() {
+		return teile;
+	}
+	public void setTeile(ArrayList<Teil> teile) {
+		this.teile = teile;
+	}
 	public String getKarosserieFarbe() {
 		return karosserieFarbe;
 	}

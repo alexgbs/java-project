@@ -11,7 +11,10 @@ public class Auto implements Commandable {
 	Kopfstütze kopfstuetze;
 	Reifen reifen;
 	Sitz sitz;
-		
+	
+	
+	
+	
 	public String getKarosserieFarbe() {
 		return karosserieFarbe;
 	}
