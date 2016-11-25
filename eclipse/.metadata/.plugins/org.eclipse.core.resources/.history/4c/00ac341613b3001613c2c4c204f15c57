@@ -2,8 +2,6 @@ package auto.ch.moser.model;
 
 import java.util.ArrayList;
 
-import auto.ch.moser.model.motor.Motor;
-
 public class Auto implements Commandable {
 	
 	String karosserieFarbe;
@@ -13,8 +11,6 @@ public class Auto implements Commandable {
 	Kopfstütze kopfstuetze;
 	Reifen reifen;
 	Sitz sitz;
-	Motor motor;
-	
 		
 
 	public String getKarosserieFarbe() {
