@@ -24,11 +24,11 @@ public class Verbrennungsmotor extends Motor {
 	}
 
 	@Override
-	public boolean executeCommand() {
+	public boolean executeCommand(String path) {
 		boolean end = false;
 		boolean modified = false;
 		while(!end) {
-			System.out.println("Werkstatt:>");
+			System.out.println(path + ":>");
 			String[] command = readLine();
 			switch(command[0]) {
 				case "list":
@@ -54,8 +54,19 @@ public class Verbrennungsmotor extends Motor {
 					if (!testCommandLenght(command,1)) break;
 					end = true;
 					break;
+				case "commands":
+					if(!testCommandLenght(command, 1)) break;
+					System.out.println("Alle Commands:");
+					System.out.println("setHubraum");
+					System.out.println("setTyp");
+					System.out.println("motorStarten");
+					System.out.println("motorAusschalten");
+					System.out.println("list");
+					System.out.println("return");
+					break;
 				default:
 					System.out.println("Komando nicht gefunden!");
+					break;
 			}
 		}
 		return modified;

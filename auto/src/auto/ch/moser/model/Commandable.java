@@ -1,5 +1,5 @@
 package auto.ch.moser.model;
 
 public interface Commandable {
-	boolean executeCommand();
+	boolean executeCommand(String path);
 }
