@@ -1,21 +1,12 @@
 package auto.ch.moser.model;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.BiConsumer;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
-
-import auto.ch.moser.model.helpers.CommandHelper;
-import auto.ch.moser.model.motor.Elektromotor;
 import auto.ch.moser.model.motor.Motor;
-import auto.ch.moser.model.motor.Verbrennungsmotor;
 
-public class Auto {
+public class Auto implements Comparable<Auto> {
 	
 	String karosserieFarbe;
 	Felgen felgen;
@@ -72,5 +63,9 @@ public class Auto {
 	}
 	public void setHersteller(Hersteller hersteller) {
 		this.hersteller = hersteller;
+	}
+	@Override
+	public int compareTo(Auto o) {
+		return o.getKarosserieFarbe().compareTo(getKarosserieFarbe());
 	}
 }

@@ -1,4 +1,4 @@
-package auto.ch.moser.model.helpers;
+package auto.ch.moser.controller.helpers;
 
 import java.util.Scanner;
 

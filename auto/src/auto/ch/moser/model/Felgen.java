@@ -1,8 +1,5 @@
 package auto.ch.moser.model;
 
-import auto.ch.moser.model.motor.Elektromotor;
-import auto.ch.moser.model.motor.Verbrennungsmotor;
-
 public class Felgen extends Teil {
 	String farbe;
 

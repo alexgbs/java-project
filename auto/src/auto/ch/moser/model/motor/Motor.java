@@ -1,7 +1,7 @@
 package auto.ch.moser.model.motor;
 
+import auto.ch.moser.controller.helpers.CommandHelper;
 import auto.ch.moser.model.Hersteller;
-import auto.ch.moser.model.helpers.CommandHelper;
 
 public abstract class Motor extends CommandHelper implements MotorSteuern {
 

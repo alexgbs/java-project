@@ -6,19 +6,19 @@ public class Reifen extends Teil {
 	String art;
 	public Reifen(Hersteller hersteller, float breite, String art) {
 		super(hersteller);
-		breite = breite;
-		art = art;
+		this.breite = breite;
+		this.art = art;
 	}
 	public float getBreite() {
 		return breite;
 	}
 	public void setBreite(float breite) {
-		breite = breite;
+		this.breite = breite;
 	}
 	public String getArt() {
 		return art;
 	}
 	public void setArt(String art) {
-		art = art;
+		this.art = art;
 	}
 }

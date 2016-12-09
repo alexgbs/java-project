@@ -1,27 +1,16 @@
 package auto.ch.moser.controller;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
-import java.util.regex.Pattern;
-
+import auto.ch.moser.controller.helpers.CommandHelper;
 import auto.ch.moser.model.Auto;
 import auto.ch.moser.model.Hersteller;
-import auto.ch.moser.model.Reifen;
-import auto.ch.moser.model.Sitz;
-import auto.ch.moser.model.helpers.CommandHelper;
-
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
-import com.google.gson.reflect.TypeToken;
 
 public class AutoZusammenSteller extends CommandHelper {
 	Map<String, Auto>auto = new HashMap<>();

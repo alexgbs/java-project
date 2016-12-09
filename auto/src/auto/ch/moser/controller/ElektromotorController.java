@@ -17,12 +17,15 @@ public class ElektromotorController extends ModelController<Elektromotor> implem
 					if (!testCommandLenght(command,1)) break;
 					System.out.println("Motordaten");
 					System.out.println("Typ: Elektromotor");
+					break;
 				case "motorStarten":
 					if (!testCommandLenght(command,1)) break;
 					System.out.println(anlassen());
+					break;
 				case "motorAusschalten":
 					if (!testCommandLenght(command,1)) break;
 					System.out.println(ausschalten());
+					break;
 				case "return":
 					if (!testCommandLenght(command,1)) break;
 					end = true;

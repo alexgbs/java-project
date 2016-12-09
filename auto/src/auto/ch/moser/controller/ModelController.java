@@ -1,11 +1,7 @@
 package auto.ch.moser.controller;
 
 import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-
-import auto.ch.moser.model.helpers.CommandHelper;
-
-import com.sun.org.apache.xml.internal.security.utils.HelperNodeList;
+import auto.ch.moser.controller.helpers.CommandHelper;
 
 public abstract class ModelController<Model> extends CommandHelper{
 	

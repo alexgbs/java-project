@@ -18,20 +18,25 @@ public class VerbrennungsmotorController extends ModelController<Verbrennungsmot
 					System.out.println("Motordaten");
 					System.out.println("Typ: " + model.getTyp());
 					System.out.println("Hubraum: " + model.getHubraum());
+					break;
 				case "setHubraum":
 					if (!testCommandLenght(command)) break;
 					model.setHubraum(Float.parseFloat(command[1]));
 					System.out.println("Hubraum erfolgreich auf " + model.getHubraum() + " gesetzt");
+					break;
 				case "setTyp":
 					if (!testCommandLenght(command)) break;
 					model.setTyp(command[1]);
 					System.out.println("Typ erfolgreich auf " + model.getTyp() + " gesetzt." );
+					break;
 				case "motorStarten":
 					if (!testCommandLenght(command,1)) break;
 					System.out.println(anlassen());
+					break;
 				case "motorAusschalten":
 					if (!testCommandLenght(command,1)) break;
 					System.out.println(ausschalten());
+					break;
 				case "return":
 					if (!testCommandLenght(command,1)) break;
 					end = true;

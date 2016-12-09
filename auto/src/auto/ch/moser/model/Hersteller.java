@@ -1,6 +1,6 @@
 package auto.ch.moser.model;
 
-import auto.ch.moser.model.helpers.CommandHelper;
+import auto.ch.moser.controller.helpers.CommandHelper;
 
 public class Hersteller extends CommandHelper {
 	private String name;

@@ -19,7 +19,7 @@ public class FelgenController extends ModelController<Felgen> {
 			case "setFarbe":
 				if(!testCommandLenght(command)) break;
 				model.setFarbe(command[1]);
-				System.out.println("Karosserie erfolgreich auf " + model.getFarbe() + " gesetzt");
+				System.out.println("Felgen erfolgreich auf " + model.getFarbe() + " gesetzt");
 				break;
 			case "list": 
 				if(!testCommandLenght(command, 1)) break;

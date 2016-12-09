@@ -6,7 +6,6 @@ import auto.ch.moser.model.Hersteller;
 import auto.ch.moser.model.Reifen;
 import auto.ch.moser.model.Sitz;
 import auto.ch.moser.model.motor.Elektromotor;
-import auto.ch.moser.model.motor.Motor;
 import auto.ch.moser.model.motor.Verbrennungsmotor;
 
 public class AutoController extends ModelController<Auto> {
@@ -75,7 +74,7 @@ public class AutoController extends ModelController<Auto> {
 				if(!testCommandLenght(command)) break;
 				if(command[1].equals("Verbrennungsmotor"))
 					model.setMotor(new Verbrennungsmotor(0, new Hersteller("Alex und Damian GmbH", "Silicon Valey"), "Verbrennungsmotor", 0));
-				else if(command[1].equals("Dieselmotor"))
+				else if(command[1].equals("Elektromotor"))
 					model.setMotor(new Elektromotor(0, new Hersteller("Alex und Damian GmbH", "Silicon Valey")));
 				else
 					System.out.println("Diesen Motortyp gibt es nicht");
