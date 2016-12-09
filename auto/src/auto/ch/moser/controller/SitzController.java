@@ -61,6 +61,19 @@ public class SitzController extends ModelController<Sitz> {
 					model.setSitzBezugsArt(command[1]);
 					System.out.println("Sitz Bezugs Art erfolgreich auf " + model.getSitzBezugsArt() + " gesetzt");
 					break;
+				case "commands":
+					if(!testCommandLenght(command, 1)) break;
+					System.out.println("Alle Commands:");
+					System.out.println("setTyp");
+					System.out.println("setHasHeizung");
+					System.out.println("setHasLehne");
+					System.out.println("setHasBezug");
+					System.out.println("setKopfstütze");
+					System.out.println("setSitzFarbe");
+					System.out.println("setSitzBezugsArt");
+					System.out.println("list");
+					System.out.println("return");
+					break;
 				case "return":
 					if (!testCommandLenght(command,1)) break;
 					end = true;

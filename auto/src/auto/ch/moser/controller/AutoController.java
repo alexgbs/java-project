@@ -33,7 +33,7 @@ public class AutoController extends ModelController<Auto> {
 				
 				Sitz sitz = model.getSitze().get(command[1]);
 				if(sitz == null) sitz = new Sitz(new Hersteller("Alex und Damian GmbH", "Silicon Valey"), command[1], false, false, false, null, null, null);
-				modified = sitz.executeCommand(path + "\\sitz(" + command[1] + ")");
+				modified = ControllerFactory.getInstance(Sitz.class).controll(path + "\\sitz(" + command[1] + ")", sitz);
 				break;
 			case "createSitz":
 				if(!testCommandLenght(command)) break;
@@ -57,7 +57,14 @@ public class AutoController extends ModelController<Auto> {
 			case "getMotor":
 				if(!testCommandLenght(command, 1)) break;
 				if(model.getMotor() == null) model.setMotor(new Verbrennungsmotor(0, new Hersteller("Alex und Damian GmbH", "Silicon Valey"), "Verbrennungsmotor", 0));
-				modified = ControllerFactory.getInstance(Motor.class).controll(path + "\\motor" + (model.getMotor() instanceof Verbrennungsmotor ? "(Verbrennungsmotor)" : "(Elektromotor)"), model.getMotor());
+				if(model.getMotor() instanceof Elektromotor) {
+					modified = ControllerFactory.getInstance(Elektromotor.class).controll(path + "\\motor" + "(Elektromotor)", (Elektromotor) model.getMotor());
+					break;
+				} else if(model.getMotor() instanceof Verbrennungsmotor) {
+					modified = ControllerFactory.getInstance(Verbrennungsmotor.class).controll(path + "\\motor" + "(Verbrennungsmotor)", (Verbrennungsmotor) model.getMotor());
+					break;
+				}
+				System.out.println("Motor nicht gefunden");
 				break;
 			case "getHersteller":
 				if(!testCommandLenght(command, 1)) break;

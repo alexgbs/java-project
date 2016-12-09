@@ -1,10 +1,9 @@
 package auto.ch.moser.model.motor;
 
-import auto.ch.moser.model.Commandable;
 import auto.ch.moser.model.Hersteller;
 import auto.ch.moser.model.helpers.CommandHelper;
 
-public abstract class Motor extends CommandHelper implements Commandable, MotorSteuern {
+public abstract class Motor extends CommandHelper implements MotorSteuern {
 
 	float leistung;
 	Hersteller hersteller;

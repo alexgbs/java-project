@@ -13,7 +13,6 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 import auto.ch.moser.model.Auto;
-import auto.ch.moser.model.Commandable;
 import auto.ch.moser.model.Hersteller;
 import auto.ch.moser.model.Reifen;
 import auto.ch.moser.model.Sitz;
@@ -24,7 +23,7 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
-public class AutoZusammenSteller extends CommandHelper implements Commandable {
+public class AutoZusammenSteller extends CommandHelper {
 	Map<String, Auto>auto = new HashMap<>();
 	File file = new File("T:\\aue\\autos.json");
 	public AutoZusammenSteller(InputStream stream) {
@@ -45,7 +44,6 @@ public class AutoZusammenSteller extends CommandHelper implements Commandable {
 		executeCommand("Werkstatt");
 	}
 
-	@Override
 	public boolean executeCommand(String path) {
 		boolean end = false;
 		boolean modified = false;
