@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
 import auto.ch.moser.model.Auto;
 import auto.ch.moser.model.Commandable;
 import auto.ch.moser.model.Hersteller;
+import auto.ch.moser.model.Reifen;
 import auto.ch.moser.model.Sitz;
 import auto.ch.moser.model.helpers.CommandHelper;
 
@@ -59,7 +60,7 @@ public class AutoZusammenSteller extends CommandHelper implements Commandable {
 					System.out.println("Dieses Auto existiert nicht!");
 					break;
 				}
-				modified = a.executeCommand(path + "\\auto(" + command[1] + ")");
+				modified = ControllerFactory.getInstance(Auto.class).controll(path + "\\auto(" + command[1] + ")", a);
 				break;
 			case "return":
 				if(!testCommandLenght(command, 1)) break;
@@ -83,6 +84,7 @@ public class AutoZusammenSteller extends CommandHelper implements Commandable {
 				if(!testCommandLenght(command, 1)) break;
 				System.out.println("Alle Commands:");
 				System.out.println("list");
+				System.out.println("getAuto");
 				System.out.println("createAuto");
 				System.out.println("return");
 				break;
