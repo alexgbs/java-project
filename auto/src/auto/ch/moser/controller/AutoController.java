@@ -7,6 +7,12 @@ import auto.ch.moser.model.Reifen;
 import auto.ch.moser.model.Sitz;
 import auto.ch.moser.model.motor.Elektromotor;
 import auto.ch.moser.model.motor.Verbrennungsmotor;
+/**
+ * Controller für {@link Auto} für die Benutzung in der Commandozeile
+ * @author moser.damian
+ *
+ */
+
 
 public class AutoController extends ModelController<Auto> {
 
@@ -106,6 +112,10 @@ public class AutoController extends ModelController<Auto> {
 		return modified;
 	}
 	
+	/**
+	 * Listet alle Autoeigenschaften auf
+	 * @param auto Auto, welches aufgelistet werden soll
+	 */
 	public void list(Auto auto) {
 		System.out.println("Autodaten");
 		System.out.println("Karosserie: " + auto.getKarosserieFarbe());

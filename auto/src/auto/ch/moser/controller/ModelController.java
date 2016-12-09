@@ -8,6 +8,13 @@ public abstract class ModelController<Model> extends CommandHelper{
 	public ModelController() {
 		ControllerFactory.addController(this);
 	}
+	
+	/**
+	 * Commandozeilenabfrage, welche bestimmte aktionen auslöst.
+	 * @param path Der weg auf dem es sich zur zeit verbindet
+	 * @param model model, welches es steuert - editiert
+	 * @return
+	 */
 	public abstract boolean controll(String path, Model model);
 	
 	public boolean instanceOf(Class clazz) {

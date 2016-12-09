@@ -1,8 +1,14 @@
 package auto.ch.moser.controller;
 
+import auto.ch.moser.model.Auto;
 import auto.ch.moser.model.motor.Elektromotor;
 import auto.ch.moser.model.motor.MotorSteuern;
 
+/**
+ * Controller für {@link Elektromotor} für die Benutzung in der Commandozeile
+ * @author moser.damian
+ *
+ */
 public class ElektromotorController extends ModelController<Elektromotor> implements MotorSteuern{
 
 	@Override

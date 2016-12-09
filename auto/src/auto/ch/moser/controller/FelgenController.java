@@ -1,7 +1,13 @@
 package auto.ch.moser.controller;
 
+import auto.ch.moser.model.Auto;
 import auto.ch.moser.model.Felgen;
 
+/**
+ * Controller für {@link Felgen} für die Benutzung in der Commandozeile
+ * @author moser.damian
+ *
+ */
 public class FelgenController extends ModelController<Felgen> {
 
 	@Override

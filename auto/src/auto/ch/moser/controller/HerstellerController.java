@@ -1,7 +1,13 @@
 package auto.ch.moser.controller;
 
+import auto.ch.moser.model.Auto;
 import auto.ch.moser.model.Hersteller;
 
+/**
+ * Controller für {@link Hersteller} für die Benutzung in der Commandozeile
+ * @author moser.damian
+ *
+ */
 public class HerstellerController extends ModelController<Hersteller> {
 
 	@Override

@@ -1,7 +1,13 @@
 package auto.ch.moser.controller;
 
+import auto.ch.moser.model.Auto;
 import auto.ch.moser.model.Kopfstuetze;
 
+/**
+ * Controller für {@link Kopfstuetze} für die Benutzung in der Commandozeile
+ * @author moser.damian
+ *
+ */
 public class KopfstuetzeController extends ModelController<Kopfstuetze> {
 
 	@Override

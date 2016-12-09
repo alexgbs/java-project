@@ -8,4 +8,18 @@ public abstract class Teil extends CommandHelper {
 	protected Teil(Hersteller hersteller) {
 		
 	}
+
+	/**
+	 * @return the hersteller
+	 */
+	public Hersteller getHersteller() {
+		return hersteller;
+	}
+
+	/**
+	 * @param hersteller the hersteller to set
+	 */
+	public void setHersteller(Hersteller hersteller) {
+		this.hersteller = hersteller;
+	}
 }

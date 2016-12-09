@@ -3,6 +3,11 @@ package auto.ch.moser.controller;
 import auto.ch.moser.model.motor.MotorSteuern;
 import auto.ch.moser.model.motor.Verbrennungsmotor;
 
+/**
+ * Controller für {@link Verbrennungsmotor} für die Benutzung in der Commandozeile
+ * @author moser.damian
+ *
+ */
 public class VerbrennungsmotorController extends ModelController<Verbrennungsmotor> implements MotorSteuern {
 
 	@Override

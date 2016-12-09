@@ -12,19 +12,33 @@ public class Hersteller extends CommandHelper {
 		this.standort = standort;
 	}
 
+	/**
+	 * @return the name
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * @param name the name to set
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * @return the standort
+	 */
 	public String getStandort() {
 		return standort;
 	}
 
+	/**
+	 * @param standort the standort to set
+	 */
 	public void setStandort(String standort) {
 		this.standort = standort;
 	}
+
+
 }

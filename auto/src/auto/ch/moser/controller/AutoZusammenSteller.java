@@ -13,26 +13,18 @@ import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 
 public class AutoZusammenSteller extends CommandHelper {
+	public static final String PATH = "Werkstatt";
 	Map<String, Auto>auto = new HashMap<>();
 	File file = new File("T:\\aue\\autos.json");
-	public AutoZusammenSteller(InputStream stream) {
-		/*Gson gson = new Gson();
-		Type type = new TypeToken<Map<String, Auto>>() {}.getType();
-		try {
-			auto = gson.fromJson(new FileReader(file), type);
-		} catch (JsonIOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JsonSyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		executeCommand("Werkstatt");
+	public AutoZusammenSteller() {
+		executeCommand(PATH);
 	}
-
+	
+	/**
+	 * Commandozeilenabfrage, welche bestimmte aktionen auslöst.
+	 * @param path Der weg auf dem es sich zur zeit verbindet
+	 * @return
+	 */
 	public boolean executeCommand(String path) {
 		boolean end = false;
 		boolean modified = false;

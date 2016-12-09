@@ -4,6 +4,11 @@ import auto.ch.moser.model.Hersteller;
 import auto.ch.moser.model.Kopfstuetze;
 import auto.ch.moser.model.Sitz;
 
+/**
+ * Controller für {@link Sitz} für die Benutzung in der Commandozeile
+ * @author moser.damian
+ *
+ */
 public class SitzController extends ModelController<Sitz> {
 
 	@Override
