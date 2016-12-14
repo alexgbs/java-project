@@ -1,5 +1,10 @@
 package auto.ch.moser.model;
 
+/**
+ * Objekt Reifen. Enthält alle Informationen, die der Reifen haben muss
+ * @author Damian
+ *
+ */
 public class Reifen extends Teil {
 
 	float breite;

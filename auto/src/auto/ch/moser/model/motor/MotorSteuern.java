@@ -1,5 +1,10 @@
 package auto.ch.moser.model.motor;
 
+/**
+ * Lässt den Motor der Autos steuern
+ * @author Damian
+ *
+ */
 public interface MotorSteuern {
 
 	/**

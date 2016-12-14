@@ -5,6 +5,11 @@ import java.util.Map;
 
 import auto.ch.moser.model.motor.Motor;
 
+/**
+ * Objekt auto. Enthält alle Informationen, die das Auto haben muss
+ * @author Damian
+ *
+ */
 public class Auto implements Comparable<Auto> {
 	
 	String karosserieFarbe;

@@ -1,5 +1,10 @@
 package auto.ch.moser.model;
 
+/**
+ * Objekt Sitz. Enthält alle Informationen, die der Sitz haben muss
+ * @author Damian
+ *
+ */
 public class Sitz extends Teil {
 	String typ;
 	boolean hasHeizung;

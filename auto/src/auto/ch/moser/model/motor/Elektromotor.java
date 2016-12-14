@@ -2,6 +2,11 @@ package auto.ch.moser.model.motor;
 
 import auto.ch.moser.model.Hersteller;
 
+/**
+ * Objekt Elektromotor. Enthält alle Informationen, die der Elektromotor haben muss
+ * @author Damian
+ *
+ */
 public class Elektromotor extends Motor {
 
 	/**

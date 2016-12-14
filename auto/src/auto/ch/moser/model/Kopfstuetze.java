@@ -1,5 +1,11 @@
 package auto.ch.moser.model;
 
+/**
+ * Objekt Kopfstuetze. Enthält alle Informationen, die die Kopfstütze haben muss
+ * @author Damian
+ *
+ */
+
 public class Kopfstuetze extends Teil {
 	String farbe;
 

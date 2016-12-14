@@ -1,6 +1,6 @@
 package auto.ch.moser.controller;
 
-import auto.ch.moser.model.Auto;
+import auto.ch.moser.model.Hersteller;
 import auto.ch.moser.model.Reifen;
 
 /**
@@ -26,11 +26,13 @@ public class ReifenController extends ModelController<Reifen> {
 				if(!testCommandLenght(command)) break;
 				model.setBreite(Float.parseFloat(command[1]));
 				System.out.println("Breite erfolgreich auf " + model.getBreite() + " gesetzt");
+				modified = true;
 				break;
 			case "setArt":
 				if(!testCommandLenght(command)) break;
 				model.setArt(command[1]);
 				System.out.println("Art erfolgreich auf " + model.getArt() + " gesetzt");
+				modified = true;
 				modified = true;
 				break;
 			case "list": 
@@ -39,11 +41,17 @@ public class ReifenController extends ModelController<Reifen> {
 				System.out.println("Breite: " + model.getBreite());
 				System.out.println("Art: " + model.getArt());
 				break;
+			case "getHersteller":
+				if(!testCommandLenght(command, 1)) break;
+				if(model.getHersteller() == null) model.setHersteller(new Hersteller("Alex und Damian GmbH", "Silicon Valey"));
+				modified = ControllerFactory.getInstance(Hersteller.class).controll(path + "\\hersteller", model.getHersteller());
+				break;
 			case "commands":
 				if(!testCommandLenght(command, 1)) break;
 				System.out.println("Alle Commands:");
 				System.out.println("setBreite");
 				System.out.println("SetArt");
+				System.out.println("getHersteller");
 				System.out.println("list");
 				System.out.println("return");
 				break;

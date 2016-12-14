@@ -1,6 +1,5 @@
 package auto.ch.moser.controller;
 
-import auto.ch.moser.model.Auto;
 import auto.ch.moser.model.Hersteller;
 
 /**

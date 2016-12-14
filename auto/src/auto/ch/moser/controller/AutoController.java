@@ -32,6 +32,7 @@ public class AutoController extends ModelController<Auto> {
 				if(!testCommandLenght(command)) break;
 				model.setKarosserieFarbe(command[1]);
 				System.out.println("Karosserie erfolgreich auf " + model.getKarosserieFarbe() + " gesetzt");
+				modified = true;
 				break;
 			case "getSitz":
 				if(!testCommandLenght(command)) break;
@@ -48,6 +49,7 @@ public class AutoController extends ModelController<Auto> {
 				}
 				Sitz sitz1 = new Sitz(new Hersteller("Alex und Damian GmbH", "Silicon Valey"), command[1], false, false, false, null, null, null);
 				model.getSitze().put(command[1], sitz1);
+				modified = true;
 				break;
 			case "getFelgen":
 				if(!testCommandLenght(command, 1)) break;
@@ -84,6 +86,7 @@ public class AutoController extends ModelController<Auto> {
 					model.setMotor(new Elektromotor(0, new Hersteller("Alex und Damian GmbH", "Silicon Valey")));
 				else
 					System.out.println("Diesen Motortyp gibt es nicht");
+				modified = true;
 				break;
 			case "list":
 				if(!testCommandLenght(command, 1)) break;

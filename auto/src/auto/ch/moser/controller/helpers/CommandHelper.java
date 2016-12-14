@@ -22,9 +22,9 @@ public abstract class CommandHelper {
 	/**
 	 * Überprüft die länge des Mitgegebenen Parameters nach der grösse, damit keine zu langen || zu kurzne
 	 * Kommandos eingegeben werden können
-	 * @param o	Arraycommand
+	 * @param s Command welcher überprüft wird
 	 * @param lenght erlaubte länge, welche das Array haben muss
-	 * @return
+	 * @return true wenn s gleichgross wie lenght, sonst false
 	 */
 	
 	public boolean testCommandLenght(String[] s, int lenght) {
@@ -35,9 +35,22 @@ public abstract class CommandHelper {
 		return true;
 	}
 	
+	/**
+	 * Überprüft die länge des Mitgegebenen Parameters nach der grösse, damit keine zu langen || zu kurzne
+	 * Kommandos eingegeben werden können.
+	 * Hier wird der Defaultwert von 2 für die Länge genommenm
+	 * @param s Command welcher überprüft wird
+	 * @return true wenn s gleichgross wie 2, sonst false
+	 */
+	
 	public boolean testCommandLenght(String[] s) {
 		return testCommandLenght(s, 2);
 	}
+	
+	/**
+	 * Lazyloading für Scanner. Wird nur intern genutzt.
+	 * @return initialisierten scanner
+	 */
 	
 	private Scanner getScanner() {
 		if(scanner == null) {

@@ -1,5 +1,10 @@
 package auto.ch.moser.model;
 
+/**
+ * Objekt Felgen. Enthält alle Informationen, die die Felgen haben mussen
+ * @author Damian
+ *
+ */
 public class Felgen extends Teil {
 	String farbe;
 

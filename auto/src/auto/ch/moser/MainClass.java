@@ -1,8 +1,17 @@
 package auto.ch.moser;
 
-import auto.ch.moser.controller.AutoZusammenSteller;
+import auto.ch.moser.controller.WerkstattController;
+import auto.ch.moser.model.Werkstatt;
+
+import java.util.HashMap;
+
 import auto.ch.moser.controller.ControllerFactory;
 
+/**
+ * Das ist die Mainmethode. Von hier aus startet das ganze Programm
+ * @author Damian
+ *
+ */
 public class MainClass {
 	/**
 	 * Startet das Programm und die wichtigen Abläufe
@@ -16,8 +25,7 @@ public class MainClass {
 		System.out.println("  \\####################################################/");
 		System.out.println();
 		ControllerFactory.init();
-		AutoZusammenSteller auto1 = new AutoZusammenSteller();
-		System.out.println(auto1);
+		ControllerFactory.getInstance(Werkstatt.class).controll("", new Werkstatt(new HashMap<>(), "Alex und Damian's Werkstatt"));
 	}
 
 }

@@ -1,6 +1,6 @@
 package auto.ch.moser.controller;
 
-import auto.ch.moser.model.Auto;
+import auto.ch.moser.model.Hersteller;
 import auto.ch.moser.model.motor.Elektromotor;
 import auto.ch.moser.model.motor.MotorSteuern;
 
@@ -36,9 +36,15 @@ public class ElektromotorController extends ModelController<Elektromotor> implem
 					if (!testCommandLenght(command,1)) break;
 					end = true;
 					break;
+				case "getHersteller":
+					if(!testCommandLenght(command, 1)) break;
+					if(model.getHersteller() == null) model.setHersteller(new Hersteller("Alex und Damian GmbH", "Silicon Valey"));
+					modified = ControllerFactory.getInstance(Hersteller.class).controll(path + "\\hersteller", model.getHersteller());
+					break;
 				case "commands":
 					if(!testCommandLenght(command, 1)) break;
 					System.out.println("Alle Commands:");
+					System.out.println("getHersteller");
 					System.out.println("motorStarten");
 					System.out.println("motorAusschalten");
 					System.out.println("list");

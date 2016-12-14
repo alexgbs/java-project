@@ -2,6 +2,11 @@ package auto.ch.moser.model.motor;
 
 import auto.ch.moser.model.Hersteller;
 
+/**
+ * Objekt Verbrennungsmotor. Enthält alle Informationen, die der Verbrennungsmotor haben muss
+ * @author Damian
+ *
+ */
 public class Verbrennungsmotor extends Motor {
 	
 	String typ;

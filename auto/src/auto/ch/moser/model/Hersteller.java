@@ -1,8 +1,12 @@
 package auto.ch.moser.model;
 
-import auto.ch.moser.controller.helpers.CommandHelper;
+/**
+ * Objekt Hersteller. Enthält alle Informationen, die der Hersteller haben muss
+ * @author Damian
+ *
+ */
 
-public class Hersteller extends CommandHelper {
+public class Hersteller {
 	private String name;
 	private String standort;
 	
