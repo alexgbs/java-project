@@ -1,6 +1,5 @@
 package auto.ch.moser;
 
-import auto.ch.moser.controller.WerkstattController;
 import auto.ch.moser.model.Werkstatt;
 
 import java.util.HashMap;
@@ -17,6 +16,7 @@ public class MainClass {
 	 * Startet das Programm und die wichtigen Abläufe
 	 * @param args
 	 */
+	public final static Werkstatt WERKSTATT = new Werkstatt(new HashMap<>(), "Alex und Damian's Werkstatt");
 	public static void main(String[] args) {
 		System.out.println("  /####################################################\\");
 		System.out.println(" /###########                              #############\\");
@@ -25,7 +25,7 @@ public class MainClass {
 		System.out.println("  \\####################################################/");
 		System.out.println();
 		ControllerFactory.init();
-		ControllerFactory.getInstance(Werkstatt.class).controll("", new Werkstatt(new HashMap<>(), "Alex und Damian's Werkstatt"));
+		ControllerFactory.getInstance(Werkstatt.class).controll("", WERKSTATT);
 	}
 
 }

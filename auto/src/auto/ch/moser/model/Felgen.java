@@ -27,5 +27,8 @@ public class Felgen extends Teil {
 		this.farbe = farbe;
 	}
 
-	
+	@Override
+	public String toString() {
+		return farbe;
+	}
 }

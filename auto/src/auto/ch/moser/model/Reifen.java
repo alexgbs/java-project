@@ -38,5 +38,9 @@ public class Reifen extends Teil {
 	public void setArt(String art) {
 		this.art = art;
 	}
-
+	
+	@Override
+	public String toString() {
+		return art + ", " + breite;
+	}
 }

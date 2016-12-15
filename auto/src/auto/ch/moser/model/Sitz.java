@@ -125,5 +125,8 @@ public class Sitz extends Teil {
 		this.sitzBezugsArt = sitzBezugsArt;
 	}
 
-	
+	@Override
+	public String toString() {
+		return typ + ", " + sitzFarbe + ", " + sitzBezugsArt;
+	}
 }

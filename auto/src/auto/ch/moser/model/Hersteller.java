@@ -44,5 +44,8 @@ public class Hersteller {
 		this.standort = standort;
 	}
 
-
+	@Override
+	public String toString() {
+		return name + ", " + standort;
+	}
 }
